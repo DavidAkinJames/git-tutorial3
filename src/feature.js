@@ -1,1 +1,2 @@
-feature1
+
+const Table = 5;
