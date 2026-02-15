@@ -1,2 +1,1 @@
-var name = "david";
- var name = "d"
+conflict 1
