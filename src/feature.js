@@ -1,1 +1,1 @@
-conflict 1
+const Table = 5;
