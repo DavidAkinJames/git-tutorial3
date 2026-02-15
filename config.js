@@ -5,5 +5,5 @@ let config = {
 };
 let user = {
   name: "Jane Foe",
-  email: "jane.doe@example.com",
+  email: "Akinwande David",
 };
