@@ -1,1 +1,1 @@
-console.assert
+let s = 5;
