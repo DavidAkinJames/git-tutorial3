@@ -1,9 +1,9 @@
-console.log("Hello, World!");
+console.log("Hello, World Updated!");
 let config = {
   name: "John Doe",
-  email: "john.doe@example.com",
+  email: "john.doe@yahoo.com",
 };
 let user = {
-  name: "Jane Doe",
+  name: "Jane Foe",
   email: "jane.doe@example.com",
 };

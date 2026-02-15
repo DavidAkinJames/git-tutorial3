@@ -1,0 +1,292 @@
+/* --- 1. GLOBAL RESET --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* GLOBAL ASSETS */
+body {
+  font-family: "Inter", sans-serif;
+  color: #1f2937; /* Dark Grey */
+  line-height: 1.5;
+  background-color: #ffffff;
+}
+
+/* --- 2. HERO SECTION (SPLIT SCREEN) --- */
+.hero-container {
+  display: flex;
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+}
+
+/* Left Side: Image */
+.hero-image {
+  flex: 1; /* Takes 50% width */
+  height: auto;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills space */
+}
+
+/* Right Side: Content */
+.hero-content {
+  flex: 1; /* Takes 50% width */
+  padding: 60px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers content vertically */
+}
+
+/* Header inside Hero */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.logo,
+.footer-logo {
+  font-family: "Dancing Script", cursive;
+  font-size: 2rem;
+  color: #ea580c; /* Orange */
+}
+
+.btn-signin {
+  color: #2563eb; /* Blue */
+  text-decoration: none;
+  font-weight: 600;
+  border: 1px solid #2563eb;
+  padding: 8px 24px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.btn-signin:hover {
+  background-color: #eff6ff;
+}
+
+/* Hero Typography */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 24px;
+  line-height: 1.2;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  color: #4b5563;
+  margin-bottom: 40px;
+  max-width: 500px;
+}
+
+/* Features Grid */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+}
+
+.icon-box {
+  width: 40px;
+  height: 40px;
+  background-color: #ffedd5; /* Light Orange */
+  color: #ea580c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+/* Hero Buttons */
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.btn-primary {
+  background-color: #ea580c; /* Orange */
+  color: white;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #2563eb; /* Blue */
+  border: 1px solid #2563eb;
+  padding: 16px;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  background-color: #c2410c;
+}
+.btn-secondary:hover {
+  background-color: #eff6ff;
+}
+
+/* --- 3. FOOTER SECTION (DARK BROWN) --- */
+.main-footer {
+  background-color: #4a332a; /* Dark Brown from image */
+  color: white;
+  padding: 80px 80px 40px;
+  font-size: 0.95rem;
+  position: relative;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-col h3 {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.brand-col p {
+  margin: 20px 0;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 280px;
+}
+
+/* Footer Links */
+.footer-links,
+.contact-info,
+.social-links {
+  list-style: none;
+}
+
+.footer-links li,
+.contact-info li,
+.social-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a,
+.social-links a {
+  color: #d1d5db; /* Light Gray */
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover,
+.social-links a:hover {
+  color: #ea580c; /* Orange on hover */
+}
+
+/* Copyright & Back to Top */
+.copyright-desktop {
+  margin-top: 40px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.copyright-mobile {
+  display: none; /* Hidden on desktop */
+  text-align: center;
+  margin-top: 40px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+.back-to-top {
+  position: absolute;
+  bottom: 40px;
+  right: 80px;
+  width: 40px;
+  height: 40px;
+  background-color: #2563eb; /* Blue */
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* --- 4. RESPONSIVE DESIGN (MOBILE) --- */
+@media (max-width: 1024px) {
+  /* Tablet Adjustments */
+  .hero-container {
+    flex-direction: column; /* Stack image on top */
+    height: auto;
+  }
+
+  .hero-image {
+    height: 40vh; /* Image takes 40% of screen height */
+  }
+
+  .hero-content {
+    padding: 40px 20px;
+  }
+
+  .main-footer {
+    padding: 60px 20px;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on tablet */
+  }
+}
+
+@media (max-width: 768px) {
+  /* Mobile Adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr; /* Stack features */
+  }
+
+  .action-buttons {
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr; /* Stack footer columns */
+    gap: 30px;
+  }
+
+  .back-to-top {
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .copyright-desktop {
+    display: none;
+  }
+  .copyright-mobile {
+    display: block;
+  }
+}
